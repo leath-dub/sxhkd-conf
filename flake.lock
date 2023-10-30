@@ -1,20 +1,5 @@
 {
   "nodes": {
-    "nix-dir": {
-      "locked": {
-        "lastModified": 1698693615,
-        "narHash": "sha256-Ja7P70kPtgDGOvHYMw+Ts4G50GhRzKAYY+SL3aMDXQ4=",
-        "owner": "leath-dub",
-        "repo": "nix-dir",
-        "rev": "b64ed893075450d15ef9c001fa269f17f0206141",
-        "type": "github"
-      },
-      "original": {
-        "owner": "leath-dub",
-        "repo": "nix-dir",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1698553279,
@@ -33,7 +18,6 @@
     },
     "root": {
       "inputs": {
-        "nix-dir": "nix-dir",
         "nixpkgs": "nixpkgs",
         "systems": "systems"
       }
