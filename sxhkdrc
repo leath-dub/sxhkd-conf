@@ -1,0 +1,40 @@
+alt + Return
+    ts
+
+alt + o
+    rofi -show drun
+
+alt + {_,shift + }{1-9,0}
+    bspc {desktop -f,node -d} '^{1-9,10}'
+
+alt + button1
+    bspc node -t floating
+
+alt + {_,shift + }w
+    bspc node -{c,k}
+
+# Boomer
+alt + z
+    $HOME/.local/bin/boomer
+
+# Screenshot
+alt + {_, shift +} s
+    $HOME/.local/bin/screenshot.sh {sel,ful} && notify-send "screenshot: copied to clipboard and $HOME/Pictures"
+
+alt + f : {h,j,k,l}
+    bspc node -p {west,south,north,east}
+
+alt + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+alt + b
+    firefox
+
+alt + t
+    bspc node focused -t tiled
+
+XF86MonBrightness{Up,Down}
+    brightnessctl set {+10%, 10%-}
+
+alt + i
+    $HOME/.config/bspwm/bspwm-bar/scripts/bar-toggle
