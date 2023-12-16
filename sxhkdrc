@@ -1,8 +1,20 @@
+alt + Tab
+    bspc desktop last -f
+
+alt + shift + Tab
+    $HOME/.config/sxhkd/cycle-states.sh
+
 alt + Return
     ts
 
+alt + shift + Return
+    tabbed ts -w ""
+
+alt + shift + t
+    dmenu_path | dmenu "$@" | xargs tabbed
+
 alt + o
-    rofi -show drun
+    dmenu_run
 
 alt + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}'
@@ -21,8 +33,11 @@ alt + z
 alt + {_, shift +} s
     $HOME/.local/bin/screenshot.sh {sel,ful} && notify-send "screenshot: copied to clipboard and $HOME/Pictures"
 
-alt + f : {h,j,k,l}
-    bspc node -p {west,south,north,east}
+# alt + f : {h,j,k,l}
+#    bspc node -p {west,south,north,east}
+
+alt + d : {j,k}
+    bspc desktop {next,prev} -f
 
 alt + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
