@@ -5,7 +5,7 @@ alt + shift + Tab
     $HOME/.config/sxhkd/cycle-states.sh
 
 alt + Return
-    ts
+    kitty
 
 alt + shift + Return
     tabbed ts -w ""
