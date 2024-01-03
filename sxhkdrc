@@ -39,7 +39,13 @@ super + {_, shift +} s
 super + d : {j,k}
     bspc desktop {next,prev} -f
 
-super + r : {h,j,k,l}
+super + shift + r; {h,j,k,l}
+    bspc node -z {left,bottom,top,right} {-20 0,0 20,0 -20,20 0}
+
+super + r; {h,j,k,l}
+    bspc node -z {left,bottom,top,right} {20 0,0 -20,0 20,-20 0}
+ 
+super + f; {h,j,k,l}
     xdotool getwindowfocus windowmove --relative %1 {-20 0,0 +20,0 -20,+20 0}
 
 super + {_,shift + }{h,j,k,l}
