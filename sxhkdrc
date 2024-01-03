@@ -1,55 +1,55 @@
-alt + Tab
+super + Tab
     bspc desktop last -f
 
-alt + shift + Tab
+super + shift + Tab
     $HOME/.config/sxhkd/cycle-states.sh
 
-alt + Return
+super + Return
     kitty
 
-alt + shift + Return
+super + shift + Return
     tabbed ts -w ""
 
-alt + shift + t
+super + shift + t
     dmenu_path | dmenu "$@" | xargs tabbed
 
-alt + o
+super + o
     dmenu_run
 
-alt + {_,shift + }{1-9,0}
+super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}'
 
-alt + button1
+super + button1
     bspc node -t floating
 
-alt + {_,shift + }w
+super + {_,shift + }w
     bspc node -{c,k}
 
 # Boomer
-alt + z
+super + z
     $HOME/.local/bin/boomer
 
 # Screenshot
-alt + {_, shift +} s
+super + {_, shift +} s
     $HOME/.local/bin/screenshot.sh {sel,ful} && notify-send "screenshot: copied to clipboard and $HOME/Pictures"
 
-# alt + f : {h,j,k,l}
+# super + f : {h,j,k,l}
 #    bspc node -p {west,south,north,east}
 
-alt + d : {j,k}
+super + d : {j,k}
     bspc desktop {next,prev} -f
 
-alt + {_,shift + }{h,j,k,l}
+super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
 
-alt + b
+super + b
     firefox
 
-alt + t
+super + t
     bspc node focused -t tiled
 
 XF86MonBrightness{Up,Down}
     brightnessctl set {+10%, 10%-}
 
-alt + i
+super + i
     $HOME/.config/bspwm/bspwm-bar/scripts/bar-toggle
